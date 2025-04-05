@@ -8,12 +8,15 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="alert alert-success">
-            Bienvenido, <strong><?php echo htmlspecialchars($user['name']); ?></strong> |
-            <a href="../controllers/logoutController.php" class="btn btn-danger btn-sm">Cerrar sesión</a>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Publicaciones</h2>
+            <div>
+                <span class="me-3">Bienvenido, <strong><?php echo htmlspecialchars($user['name']); ?></strong></span>
+                <a href="../controllers/fileManagerController.php" class="btn btn-outline-primary me-2">Gestor de Archivos</a>
+                <a href="../controllers/logoutController.php" class="btn btn-danger">Cerrar sesión</a>
+            </div>
         </div>
 
-        <h2>Publicaciones</h2>
         <div class="row">
             <?php foreach ($publishedPosts as $post): ?>
                 <div class="col-md-4">
